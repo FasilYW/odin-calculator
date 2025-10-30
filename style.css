@@ -1,0 +1,40 @@
+:root{
+  --bg: #0f1724;
+  --panel: #111827;
+  --accent: #06b6d4;
+  --muted: #94a3b8;
+  --glass: rgba(255,255,255,0.04);
+  --key-bg: linear-gradient(180deg,#1f2937,#111827);
+  --danger:#ef4444;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+body{background: radial-gradient(ellipse at 10% 10%, #071022 0%, var(--bg) 35%), #061021; color:#e6eef6; display:flex; align-items:center; justify-content:center; padding:40px;}
+
+.calculator-app{width:360px; background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); border-radius:16px; box-shadow: 0 10px 30px rgba(2,6,23,0.7); overflow:hidden; border:1px solid rgba(255,255,255,0.03);}
+
+.app-header{padding:18px 20px; border-bottom:1px solid rgba(255,255,255,0.03);}
+.app-header h1{margin:0;font-size:20px;letter-spacing:0.6px}
+.app-header small{color:var(--muted); display:block; margin-top:6px;font-size:12px}
+
+.calculator{padding:18px;}
+.display{height:72px; background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border-radius:12px; padding:12px 16px; font-size:32px; display:flex; align-items:flex-end; justify-content:flex-end; color:#e6eef6; box-shadow: inset 0 -6px 18px rgba(2,6,23,0.6); overflow:hidden;}
+
+.controls{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;}
+
+.btn{flex:1 0 22%; min-width:60px; height:52px; border-radius:10px; border: none; background:var(--key-bg); color:#e6eef6; font-size:18px; cursor:pointer; box-shadow: 0 6px 16px rgba(2,6,23,0.6); transition: transform .07s ease, box-shadow .07s ease; display:inline-flex; align-items:center; justify-content:center;}
+
+.btn:active{transform:translateY(2px); box-shadow: 0 3px 8px rgba(2,6,23,0.6);}
+
+.btn-ac{background:linear-gradient(180deg,#ff6b6b,#ef4444); color:white; font-weight:700;}
+.btn-back{background:linear-gradient(180deg,#fb923c,#f97316); color:white; font-weight:700;}
+.btn-op{background:linear-gradient(180deg,#334155,#111827); color:var(--accent); font-weight:700; border:1px solid rgba(6,182,212,0.08);}
+.btn-equal{flex:1 0 22%; background: linear-gradient(180deg,#06b6d4,#0891b2); color:#072027; font-weight:900; font-size:20px;}
+.btn-zero{flex:1 0 47%; min-width:140px;}
+
+.options{display:flex; align-items:center; gap:10px; padding:12px 18px; border-top:1px solid rgba(255,255,255,0.02); background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);}
+
+.commit-btn{margin-left:auto;background:transparent;border:1px dashed rgba(255,255,255,0.06); color:var(--muted); padding:8px 12px;border-radius:8px;cursor:pointer;}
+
+.app-footer{padding:12px 18px; font-size:12px; color:var(--muted); border-top:1px solid rgba(255,255,255,0.02);}
